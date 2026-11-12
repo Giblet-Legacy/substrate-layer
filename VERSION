@@ -1,0 +1,5 @@
+# VERSION — P9 Substrate (substrate-layer)
+# Function: the current release version of this layer. Advances only on freeze.
+# 1.0.0 — P9 frozen. Tests pass (6/6).
+
+1.0.0
