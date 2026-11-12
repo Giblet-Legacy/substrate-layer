@@ -1,5 +1,7 @@
 # VERSION — P9 Substrate (substrate-layer)
 # Function: the current release version of this layer. Advances only on freeze.
 # 1.0.0 — P9 frozen. Tests pass (6/6).
+# 2.0.0 — substrate_v2.py strict layer frozen (SPEC_V2.md). v1 6/6, v2 19/19.
+#         substrate.py unchanged.
 
-1.0.0
+2.0.0
