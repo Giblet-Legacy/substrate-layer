@@ -22,6 +22,8 @@ Every function MUST have a numbered header (e.g., `# 2. write_claim`).
 - Depends on `envelope_v2` (P1), `sign_v2` (P2), and `store` (P8, not yet wired — NOTES Q1).
 - `substrate_v2.py` (P9 v2.0.0, SPEC_V2.md) is frozen over frozen v1 `substrate.py`.
 - Current layer is `substrate_v3.py` (SPEC_V3.md, frozen 3.0.0): read-only API and the attestation rule. New code imports `substrate_v3`.
+- `substrate_v4.py` (SPEC_V4.md, frozen 4.0.0): entities, subjects and
+  signed membership; `claims_about` and `unregistered`. Resolves NOTES Q4.
 - Implements the semantic memory graph: Entities, Subjects, Claims, Evidence.
 - Manages supersession: replacing an old claim with a new one.
 - No ledger logic — delegates to P8 for storage.

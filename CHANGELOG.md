@@ -21,6 +21,38 @@ Function:
 
 - (none)
 
+## [v4.0.0] — 2026-11-13 — FROZEN
+
+### Good
+
+- `SPEC_V4.md`, `test_substrate_v4.py` (9 tests, run red first) and
+  `substrate_v4.py`: entities and subjects at last (NOTES Q4). Each is a
+  signed record with a name that is unique, case-insensitively, across
+  both types; entities join subjects through signed memberships. Reads:
+  `list_entities`, `list_subjects`, `members`, `subjects_of`, `find`,
+  `claims_about` (a subject's own claims, then its member entities'),
+  `unregistered` (claim subjects not yet registered, for the Cockpit to
+  offer). `init_db` upgrades a v3 database in place by adding tables;
+  reads on a pre-v4 database return empty.
+- 42/42 pass from the repo root and from the parent directory.
+  substrate.py, substrate_v2.py and substrate_v3.py untouched. Built on
+  James's delegation ("ok spec it and build"). Frozen at 4.0.0 (James: "freeze commmit and push", 2026-11-13); laptop run, S24 run
+  still to be confirmed.
+
+### Bad
+
+- Nothing writes entities or subjects yet: the Cockpit needs a command
+  (a Cockpit v1.3), and the Field, Legacy and Voice still read claims
+  only. P9 is ready for them; they are not wired.
+
+### Ugly
+
+- Claims still name their subject as free text inside the signed
+  capsule, so the link from claim to subject is by name key, not by id.
+  Changing that would mean re-signing claims; v4 resolves names instead.
+- `claims_about` scans active claims in Python rather than by index;
+  fine at thousands of claims, to revisit if memory grows far past that.
+
 ## [v3.0.0] — 2026-11-13 — FROZEN
 
 ### Good

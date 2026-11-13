@@ -33,6 +33,11 @@ Function:
 - **Q5 — no "current claim" lookup.** Nothing follows a supersession
   chain to its active head. P12 Rules will likely need one.
 
+- **Q7 — Freeze substrate_v4 at 4.0.0?** Built and green on the laptop
+  (42/42). Not yet run on the S24. Raised 2026-11-13. Owner: James.
+  **Resolved 2026-11-13 — James: "freeze commmit and push".** Frozen on the laptop run; S24 run still to be confirmed.
+- **Q4 status (2026-11-13):** answered by `substrate_v4.py` (SPEC_V4.md),
+  frozen 4.0.0 (2026-11-13); resolved with Q7.
 - **Q6 — Freeze substrate_v3 at 3.0.0?** **Resolved 2026-11-13 — James: "freeze all".** Frozen on the laptop run; confirmed on the S24 by James, 2026-11-13. Built and green on the
   laptop (33/33). Not yet run on the S24. Raised 2026-11-13. Owner:
   James.

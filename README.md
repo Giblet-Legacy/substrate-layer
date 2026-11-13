@@ -15,6 +15,8 @@ Licence:  MSL-1.0
 Author:   James Gilbert (Giblets Forge)
 Status:   2.0.0 (frozen). substrate_v3.py (SPEC_V3.md) is built over it,
           frozen at 3.0.0. New code imports substrate_v3.
+          substrate_v4.py (SPEC_V4.md: entities and subjects) is frozen
+          at 4.0.0 over v3.
 
 ## Files
 

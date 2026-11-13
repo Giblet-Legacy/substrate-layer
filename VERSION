@@ -6,4 +6,6 @@
 
 # 3.0.0 — substrate_v3.py frozen (SPEC_V3.md: read-only API, attestation rule). Tests pass (33/33).
 
-3.0.0
+# 4.0.0 — substrate_v4.py frozen (SPEC_V4.md: entities, subjects, memberships). 42/42. Tests pass on the laptop; S24 run to be confirmed.
+
+4.0.0
