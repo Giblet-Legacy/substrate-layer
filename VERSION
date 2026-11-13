@@ -4,4 +4,6 @@
 # 2.0.0 — substrate_v2.py strict layer frozen (SPEC_V2.md). v1 6/6, v2 19/19.
 #         substrate.py unchanged.
 
-2.0.0
+# 3.0.0 — substrate_v3.py frozen (SPEC_V3.md: read-only API, attestation rule). Tests pass (33/33).
+
+3.0.0

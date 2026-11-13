@@ -20,7 +20,8 @@ Every function MUST have a numbered header (e.g., `# 2. write_claim`).
 
 ## P9 Architecture Specifics
 - Depends on `envelope_v2` (P1), `sign_v2` (P2), and `store` (P8, not yet wired — NOTES Q1).
-- Current layer is `substrate_v2.py` (P9 v2.0.0, SPEC_V2.md). New code imports `substrate_v2`, not `substrate`. `substrate.py` is frozen v1.
+- `substrate_v2.py` (P9 v2.0.0, SPEC_V2.md) is frozen over frozen v1 `substrate.py`.
+- Current layer is `substrate_v3.py` (SPEC_V3.md, frozen 3.0.0): read-only API and the attestation rule. New code imports `substrate_v3`.
 - Implements the semantic memory graph: Entities, Subjects, Claims, Evidence.
 - Manages supersession: replacing an old claim with a new one.
 - No ledger logic — delegates to P8 for storage.

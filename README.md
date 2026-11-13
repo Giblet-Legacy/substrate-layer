@@ -13,7 +13,8 @@ Depends:  P1 Envelope v2, P2 Sign v2, P8 Store (planned, NOTES Q1)
 Consumed: P12 Rules, P13 DataCube, SC-OS
 Licence:  MSL-1.0
 Author:   James Gilbert (Giblets Forge)
-Status:   2.0.0 (frozen)
+Status:   2.0.0 (frozen). substrate_v3.py (SPEC_V3.md) is built over it,
+          frozen at 3.0.0. New code imports substrate_v3.
 
 ## Files
 

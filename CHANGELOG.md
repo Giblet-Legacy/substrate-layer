@@ -7,6 +7,36 @@ Function:
     Updated at every sign-off. The format never changes shape, even
     when a section is empty.
 
+## [Unreleased]
+
+### Good
+
+- (none)
+
+### Bad
+
+- (none)
+
+### Ugly
+
+- (none)
+
+## [v3.0.0] — 2026-11-13 — FROZEN
+
+### Good
+
+- `SPEC_V3.md`, `test_substrate_v3.py` (8 tests, run red first) and `substrate_v3.py`: a read-only API (`list_claims`, `read_claim`, `read_evidence`, SQLite `mode=ro`, optional per-row verification that never raises) so the Weaver, Echo, SCP Substrate and Legacy can stop reading `forge.db` with their own SQL.
+- The attestation rule is now defined (SPEC_V3 §3): a HAL seal is stored as evidence of kind `attestation` (approve) or `refusal` (refuse), via `link_attestation`; `latest_attestation` reads it back. This is the shape SCP Substrate already assumed, so its glow can light from a real approval.
+- 33/33 pass from the repo root and from the parent directory. Built on James's delegation ("fix all 11 issues"). Frozen at 3.0.0 on James's sign-off ("freeze all", 2026-11-13).
+
+### Bad
+
+- Frozen on the laptop run alone (2026-11-13); the S24 run is still to be confirmed.
+
+### Ugly
+
+- v3 calls v2's private `_verify_text` for verify-on-read, rather than reimplement it. Safe while v2 is frozen.
+
 ## [v2.0.0] — 2026-11-12
 
 ### Good

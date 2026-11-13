@@ -14,7 +14,8 @@ Function:
 - **Q1 — P8 Store is not used.** CLAUDE.md and the v1 header say P9
   depends on and delegates storage to P8 Store, but substrate.py
   calls sqlite3 directly and there is no P8 checkout beside this repo
-  (`../store-layer` does not exist on the laptop). Moving storage to
+  (`../store-layer` did not exist on the laptop at the time; it does
+  now, at P8 v2.1.0, 2026-11-13). Moving storage to
   P8 needs P8's API first; until then v1 and v2 use sqlite3 directly.
 - **Q2 — evidence_id ignores claim_id.** evidence_id is the hash of
   the signed evidence alone, so the same evidence capsule signed by
@@ -31,6 +32,10 @@ Function:
   entities or subjects exist yet.
 - **Q5 — no "current claim" lookup.** Nothing follows a supersession
   chain to its active head. P12 Rules will likely need one.
+
+- **Q6 — Freeze substrate_v3 at 3.0.0?** **Resolved 2026-11-13 — James: "freeze all".** Frozen on the laptop run; the S24 run is still to be confirmed. Built and green on the
+  laptop (33/33). Not yet run on the S24. Raised 2026-11-13. Owner:
+  James.
 
 ## Divergences — substrate.py v1.0.0 vs SPEC.md v1.0.0
 
@@ -77,6 +82,12 @@ and test_substrate.py's functions have no numbered headers. Both
 files are frozen; the v2 files follow the discipline in full.
 
 ## Decisions
+- 2026-11-13 — v3 (SPEC_V3.md) gives readers a read-only API and
+  defines where attestations live: evidence of kind `attestation` or
+  `refusal` carrying the signed P15 seal. P9 checks the seal's P2
+  signature; HAL policy stays with the caller (P9 cannot import P15).
+  Decided by the VS Code AI on James's delegation ("fix all 11
+  issues").
 
 - claim_id is content-addressed: sha256 of the canonical signed capsule.
   Two identical claims signed by the same key produce the same claim_id.
