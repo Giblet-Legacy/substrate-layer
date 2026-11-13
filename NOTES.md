@@ -33,7 +33,7 @@ Function:
 - **Q5 — no "current claim" lookup.** Nothing follows a supersession
   chain to its active head. P12 Rules will likely need one.
 
-- **Q6 — Freeze substrate_v3 at 3.0.0?** **Resolved 2026-11-13 — James: "freeze all".** Frozen on the laptop run; the S24 run is still to be confirmed. Built and green on the
+- **Q6 — Freeze substrate_v3 at 3.0.0?** **Resolved 2026-11-13 — James: "freeze all".** Frozen on the laptop run; confirmed on the S24 by James, 2026-11-13. Built and green on the
   laptop (33/33). Not yet run on the S24. Raised 2026-11-13. Owner:
   James.
 
